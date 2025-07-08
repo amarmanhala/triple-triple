@@ -230,7 +230,7 @@ export default function Home() {
                   preload="metadata"
                   onError={(e) => console.error('Toronto video failed to load:', e)}
                 >
-                  <source src="/toronto.mov" />
+                  <source src="/toronto.mp4" type="video/mp4" />
                   <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -257,7 +257,7 @@ export default function Home() {
                   preload="metadata"
                   onError={(e) => console.error('Coffee video failed to load:', e)}
                 >
-                  <source src="/coffee.mov" />
+                  <source src="/coffee.mp4" type="video/mp4" />
                   <div className="w-full h-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -284,7 +284,7 @@ export default function Home() {
                   preload="metadata"
                   onError={(e) => console.error('Nature video failed to load:', e)}
                 >
-                  <source src="/nature.mov" />
+                  <source src="/nature.mp4" type="video/mp4" />
                   <div className="w-full h-full bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -311,7 +311,7 @@ export default function Home() {
                   preload="metadata"
                   onError={(e) => console.error('Running video failed to load:', e)}
                 >
-                  <source src="/running.mov" />
+                  <source src="/running.mp4" type="video/mp4" />
                   <div className="w-full h-full bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
