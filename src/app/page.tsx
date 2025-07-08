@@ -228,7 +228,7 @@ export default function Home() {
                   muted
                   playsInline
                 >
-                  <source src="/toronto.mov" type="video/mp4" />
+                  <source src="/toronto.mov" type="video/quicktime" />
                   <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -253,7 +253,7 @@ export default function Home() {
                   muted
                   playsInline
                 >
-                  <source src="/coffee.mov" type="video/mp4" />
+                  <source src="/coffee.mov" type="video/quicktime" />
                   <div className="w-full h-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -278,7 +278,7 @@ export default function Home() {
                   muted
                   playsInline
                 >
-                  <source src="/nature.mov" type="video/mp4" />
+                  <source src="/nature.mov" type="video/quicktime" />
                   <div className="w-full h-full bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
@@ -303,7 +303,7 @@ export default function Home() {
                   muted
                   playsInline
                 >
-                  <source src="/running.mov" type="video/mp4" />
+                  <source src="/running.mov" type="video/quicktime" />
                   <div className="w-full h-full bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
                     <div className="text-zinc-400 text-center">
                       <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
