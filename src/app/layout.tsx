@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description: "Full Stack Developer focused on building fast, scalable, and user-friendly digital products. Experienced in leading projects from concept to deployment across web and mobile platforms.",
     images: [
       {
-        url: "https://amarpreet.xyz/portfolio.jpg",
+        url: "https://amarpreet.xyz/portfolio.png",
         width: 1200,
         height: 630,
         alt: "Amarpreet Singh Portfolio Preview",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Amarpreet Singh – Portfolio",
     description: "Full Stack Developer focused on building fast, scalable, and user-friendly digital products. Experienced in leading projects from concept to deployment across web and mobile platforms.",
     creator: "@amarsinghca",
-    images: ["https://amarpreet.xyz/portfolio.jpg"],
+    images: ["https://amarpreet.xyz/portfolio.png"],
   },
   verification: {
     google: "your-google-verification-code",
