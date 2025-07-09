@@ -19,9 +19,9 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://amarpreetsingh.com'),
-  title: "Amarpreet Singh - Frontend & Backend Developer | Toronto, Canada",
-  description: "Experienced software developer specializing in React, Node.js, TypeScript, iOS development, and UI/UX design. Available for remote work and opportunities in Toronto, Ontario, Canada, and USA.",
+  metadataBase: new URL('https://amarpreet.xyz'),
+  title: "Amarpreet Singh – Portfolio",
+  description: "Full Stack Developer focused on building fast, scalable, and user-friendly digital products. Experienced in leading projects from concept to deployment across web and mobile platforms.",
   keywords: [
     "Amarpreet Singh",
     "Frontend Developer Toronto",
@@ -63,31 +63,31 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://amarpreetsingh.com",
-    siteName: "Amarpreet Singh - Software Developer",
-    title: "Amarpreet Singh - Frontend & Backend Developer | Toronto, Canada",
-    description: "Experienced software developer specializing in React, Node.js, TypeScript, iOS development, and UI/UX design. Available for remote work and opportunities in Toronto, Ontario, Canada, and USA.",
+    url: "https://amarpreet.xyz/",
+    siteName: "Amarpreet Singh – Portfolio",
+    title: "Amarpreet Singh – Portfolio",
+    description: "Full Stack Developer focused on building fast, scalable, and user-friendly digital products. Experienced in leading projects from concept to deployment across web and mobile platforms.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://amarpreet.xyz/portfolio.jpg",
         width: 1200,
         height: 630,
-        alt: "Amarpreet Singh - Software Developer",
+        alt: "Amarpreet Singh Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amarpreet Singh - Frontend & Backend Developer | Toronto, Canada",
-    description: "Experienced software developer specializing in React, Node.js, TypeScript, iOS development, and UI/UX design. Available for remote work.",
+    title: "Amarpreet Singh – Portfolio",
+    description: "Full Stack Developer focused on building fast, scalable, and user-friendly digital products. Experienced in leading projects from concept to deployment across web and mobile platforms.",
     creator: "@amarsinghca",
-    images: ["/og-image.jpg"],
+    images: ["https://amarpreet.xyz/portfolio.jpg"],
   },
   verification: {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://amarpreetsingh.com",
+    canonical: "https://amarpreet.xyz",
   },
   other: {
     "geo.region": "CA-ON",

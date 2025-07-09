@@ -344,7 +344,7 @@ export default function Home() {
                 email
               </a>
               <a href="https://x.com/amarsinghca" target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors duration-200 text-lg font-medium">
-                follow on X
+                X(twitter)
               </a>
               <a href="https://www.linkedin.com/in/hyumanamar/" target="_blank" rel="noopener noreferrer" className="text-zinc-600 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-zinc-100 transition-colors duration-200 text-lg font-medium">
                 linkedIn
