@@ -214,7 +214,7 @@ export default function Home() {
           </div>
 
           {/* Reel Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-4xl">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-4xl">
             {/* Card 1 */}
             <div className="group cursor-pointer">
               <div className="bg-zinc-100 dark:bg-zinc-800 rounded-3xl aspect-[3/4] mb-4 overflow-hidden">
