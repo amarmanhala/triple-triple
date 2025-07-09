@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Text Reels - Learn with reels",
+      "category": "Web app",
+      "description": "An AI educational platform that transforms learning content into engaging reel format for better retention and interactive learning experience.",
+      "image": "/textreels.png",
+      "link": "https://textreels.com"
+    },
+    {
+      "id": 2,
+      "name": "ExpenAI - Simplify spending with AI",
+      "category": "Web app",
+      "description": "Simplify spending with AI",
+      "image": "/expenai.png",
+      "link": "https://www.expenai.com/"
+    }
+  ]
+}

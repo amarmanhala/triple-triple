@@ -1,7 +1,24 @@
 'use client';
 import * as React from 'react';
 
+interface Project {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
 export default function Home() {
+  const [projects, setProjects] = React.useState<Project[]>([]);
+
+  React.useEffect(() => {
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => setProjects(data.projects))
+      .catch(error => console.error('Error fetching projects:', error));
+  }, []);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -136,69 +153,28 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Project 1 */}
-            <div className="group cursor-pointer">
-              <div className="bg-zinc-100 dark:bg-zinc-800 rounded-4xl aspect-[16/9] mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
-                  <div className="text-zinc-400 text-center">
-                    <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-sm">Project Image</p>
-                    <p className="text-xs">800x600px</p>
-                  </div>
-                </div>
+            {projects.map((project) => (
+              <div key={project.id} className="group cursor-pointer">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <figure className="mb-4">
+                    <div className="bg-zinc-100 dark:bg-zinc-800 rounded-4xl aspect-[16/9] overflow-hidden">
+                      <picture>
+                        <source media="(min-width:768px)" srcSet={project.image} />
+                        <source media="(min-width:480px)" srcSet={project.image} />
+                        <img 
+                          src={project.image} 
+                          alt={project.description}
+                          className="w-full h-full object-cover"
+                        />
+                      </picture>
+                    </div>
+                    <figcaption className="text-lg text-zinc-950 dark:text-zinc-100 mt-4">
+                      {project.name} <span className="text-lg text-zinc-500">{project.category}</span>
+                    </figcaption>
+                  </figure>
+                </a>
               </div>
-              <h3 className="text-lg text-zinc-950 dark:text-zinc-100">
-                Text Reels - Learn with reels <span className="text-2xl text-zinc-500">Web app</span>
-              </h3>
-            </div>
-
-            {/* Project 2 */}
-            <div className="group cursor-pointer">
-              <div className="bg-zinc-100 rounded-3xl aspect-[16/9] mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
-                  <div className="text-zinc-400 text-center">
-                    <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-sm">Project Image</p>
-                    <p className="text-xs">800x600px</p>
-                  </div>
-                </div>
-              </div>
-              <h3 className="text-lg text-zinc-950 dark:text-zinc-100">
-                SaaS Dashboard <span className="text-2xl text-zinc-500">Web app</span>
-              </h3>
-            </div>
-
-            {/* Project 3 */}
-            <div className="group cursor-pointer">
-              <div className="bg-zinc-100 rounded-3xl aspect-[16/9] mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
-                  <div className="text-zinc-400 text-center">
-                    <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-sm">Project Image</p>
-                    <p className="text-xs">800x600px</p>
-                  </div>
-                </div>
-              </div>
-              <h3 className="text-lg text-zinc-950 dark:text-zinc-100">
-                Fitness App <span className="text-2xl text-zinc-500">Web app</span>
-              </h3>
-            </div>
-
-            {/* Project 4 */}
-            <div className="group cursor-pointer">
-              <div className="bg-zinc-100 rounded-3xl aspect-[16/9] mb-4 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center">
-                  <div className="text-zinc-400 text-center">
-                    <div className="w-16 h-16 bg-zinc-300 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-sm">Project Image</p>
-                    <p className="text-xs">800x600px</p>
-                  </div>
-                </div>
-              </div>
-              <h3 className="text-lg text-zinc-950 dark:text-zinc-100">
-                Banking Platform <span className="text-2xl text-zinc-500">Web app</span>
-              </h3>
-            </div>
+            ))}
           </div>
         </div>
       </section>
