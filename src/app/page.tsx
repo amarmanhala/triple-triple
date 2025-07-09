@@ -12,12 +12,16 @@ interface Project {
 
 export default function Home() {
   const [projects, setProjects] = React.useState<Project[]>([]);
+  const [aboutContent, setAboutContent] = React.useState<string[]>([]);
 
   React.useEffect(() => {
     fetch('/data.json')
       .then(response => response.json())
-      .then(data => setProjects(data.projects))
-      .catch(error => console.error('Error fetching projects:', error));
+      .then(data => {
+        setProjects(data.projects);
+        setAboutContent(data.about);
+      })
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
   const jsonLd = {
     "@context": "https://schema.org",
@@ -155,7 +159,26 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {projects.map((project) => (
               <div key={project.id} className="group cursor-pointer">
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <figure className="mb-4">
+                      <div className="bg-zinc-100 dark:bg-zinc-800 rounded-4xl aspect-[16/9] overflow-hidden">
+                        <picture>
+                          <source media="(min-width:768px)" srcSet={project.image} />
+                          <source media="(min-width:480px)" srcSet={project.image} />
+                          <img 
+                            src={project.image} 
+                            alt={project.description}
+                            className="w-full h-full object-cover"
+                          />
+                        </picture>
+                      </div>
+                      <figcaption className="text-lg text-zinc-950 dark:text-zinc-100 mt-4">
+                        {project.name} <span className="text-lg text-zinc-500">{project.category}</span>
+                      </figcaption>
+                    </figure>
+                  </a>
+                ) : (
                   <figure className="mb-4">
                     <div className="bg-zinc-100 dark:bg-zinc-800 rounded-4xl aspect-[16/9] overflow-hidden">
                       <picture>
@@ -172,7 +195,7 @@ export default function Home() {
                       {project.name} <span className="text-lg text-zinc-500">{project.category}</span>
                     </figcaption>
                   </figure>
-                </a>
+                )}
               </div>
             ))}
           </div>
@@ -184,11 +207,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-left max-w-6xl">
             <div className="text-xl text-zinc-950 dark:text-zinc-100 space-y-3 max-w-4xl">
-              <p>A passionate product designer with over 5 years of experience crafting digital experiences.</p>
-              <p>I specialize in user research, interface design, and creating products that solve real problems.</p>
-              <p>Currently building ExpenAI, an innovative expense tracking solution for modern businesses.</p>
-              <p>Previously worked at Fintelics, where I led design for financial technology products.</p>
-              <p>I believe great design happens when creativity meets strategy and user needs.</p>
+              {aboutContent.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
           </div>
 

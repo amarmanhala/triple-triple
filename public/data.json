@@ -1,4 +1,9 @@
 {
+  "about": [
+    "Full Stack Developer focused on building fast, scalable, and user-friendly digital products.",
+    "Experienced in leading projects from concept to deployment across web and mobile platforms.",
+    "Open-source contributor and lifelong learner, always exploring smarter ways to build."
+  ],
   "projects": [
     {
       "id": 1,
@@ -6,7 +11,7 @@
       "category": "Web app",
       "description": "An AI educational platform that transforms learning content into engaging reel format for better retention and interactive learning experience.",
       "image": "/textreels.png",
-      "link": "https://textreels.com"
+      "link": ""
     },
     {
       "id": 2,
